@@ -11,6 +11,8 @@ int knight_check(char *buffer, int status)
     int ext_comp = strncmp("exit", buffer, 4);
     int en_comp = strncmp("\n", buffer, 1);
 
+    buffer[strcspn(buffer, "\n")] = 0;
+
     token = strtok(buffer, " ");
 
     while (token != NULL && i < 9)

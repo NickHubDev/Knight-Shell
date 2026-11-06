@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #include <sys/wait.h>
 
 int knight_exec(char **args)
 {
 	pid_t pid = fork();
-	
+
 	if (pid < 0)
 	{
 		perror("Pid Error");
