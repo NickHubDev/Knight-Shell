@@ -1,6 +1,7 @@
 #ifndef LOOPH
 #define LOOPH
 
-void knight_loop(void);
+int knight_loop(void);
+void knight_prompt(void);
 
 #endif

@@ -1,10 +1,10 @@
 CC = gcc
 FILE = main.c
 OUTPUT = k-shell
-SRC = src
+SRCS = main.c $(wildcard src/*.c) $(wildcard src/**/*.c)
 
 build:
-	$(CC) $(FILE) $(SRC)/* -o $(OUTPUT)
+	$(CC) $(SRCS) -o $(OUTPUT) -lreadline
 	./$(OUTPUT)
 
 clear:
