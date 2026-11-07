@@ -1,1 +1,0 @@
-<h1 align="center">Knight Shell</h1>
