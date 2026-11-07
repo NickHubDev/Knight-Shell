@@ -1,2 +1,4 @@
 .vscode
 k-shell
+src/k_checker.h
+src/k_checker.c
