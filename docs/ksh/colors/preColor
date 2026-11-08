@@ -1,0 +1,11 @@
+The preColor values are created for represents simples status of the processes
+does in the shell scripting or every type of files that brings outputs.
+
+pre-created colors --> {
+	data => preColor.data();
+	error => preColor.error();
+	night => preColor.night();
+	info => preColor.info();
+	success => preColor.suc();
+	warn => preColor.warn();
+}

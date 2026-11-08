@@ -1,0 +1,41 @@
+The Syntax of the .ksh Files is pretty simple:
+
+Basics
+=======
+
+Variable --> v name = x;
+Constant --> c name = x;
+float --> f name = x;
+int --> int name = x;
+
+Default Actions (No Libraries Required)
+========================================
+
+Git Actions --> git.ActionToDo();
+Alias Actions --> alias.ActionToDo();
+Slow Actions --> slow.data();
+Dir Actions --> dir.dir();
+Show Input --> show();
+
+Default Colletions (No Libraries Required)
+===========================================
+
+Prompt Structure --> prompt{}
+Aliases Structure --> aliases{}
+Top Prompt Structure --> topPrompt{}
+Down Prompt Structure --> dPrompt{}
+
+Colors Setters (No Libraries Required)
+=======================================
+
+Basic Colors Revalued --> basic.${Name Of The Color in The https://github.com/NickHubDev/Knight-Shell/tree/main/docs/colors/basics}();
+Pre-Valuated Colors --> preColor.${Name of the Color in the https://github.com/NickHubDev/Knight-Shell/tree/main/docs/colors/perso}();
+
+Libraries
+==========
+
+The default libraries for this project are being created
+and the addons of the community to, remind you can check the addons
+using https://github.com/NickHubDev/Knight-Shell/tree/dev/community/addons.md.
+
+
