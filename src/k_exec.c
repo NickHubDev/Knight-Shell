@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include "raw_mode.h"
+#include "util/items/raw_mode.h"
 
 int knight_exec(char **args)
 {

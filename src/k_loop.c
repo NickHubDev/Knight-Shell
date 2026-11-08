@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "k_loop.h"
-#include "raw_mode.h"
-#include "util/translation.h"
+#include "util/items/raw_mode.h"
+#include "util/actions/translation.h"
 
 void knight_prompt(void)
 {
