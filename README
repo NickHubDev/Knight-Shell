@@ -1,5 +1,82 @@
-Knight Shell (Developers Presentation)
-=============
+===============================================================================
+KNIGHT SHELL - DEVELOPERS DOCUMENTATION
+===============================================================================
 
-Shell write in C, created for an educative
-pruporse.
+Version: 0.6.0
+Language: C (Standard C99/C11)
+Repository: https://github.com/NickHubDev/Knight-Shell.git
+
+This document is intended for developers who want to understand the internal 
+structure of Knight-Shell, compile it from source, or contribute to its core 
+development.
+
+-------------------------------------------------------------------------------
+1. PROJECT STRUCTURE
+-------------------------------------------------------------------------------
+The codebase is organized as follows:
+
+- main.c       : Starter point, in this file we only call the knight_loop()
+                 function.
+
+- src/         : Source files containing core logic, built-in commands, 
+                 and utility functions.
+
+- shell/       : Additional environment/shell subsystem components.
+
+- Makefile     : Compilation automation script for GCC/Clang.
+
+- install.sh   : Installer script for standard users.
+
+- .gitignore   : Build artifacts and temporary file filters.
+
+-------------------------------------------------------------------------------
+2. COMPILATION AND BUILDING
+-------------------------------------------------------------------------------
+As a developer, you might prefer to bypass the 'install.sh' script and manage 
+the build process manually using the provided Makefile.
+
+Requirements:
+- A C compiler (gcc)
+- GNU Make
+
+To build the executable:
+$ make
+
+This will compile the source files and generate the 'knight' binary in the 
+root directory.
+
+To clean build artifacts (object files and binaries):
+$ make clean
+
+-------------------------------------------------------------------------------
+3. UNDER THE HOOD & FUTURE IMPLEMENTATIONS
+-------------------------------------------------------------------------------
+- Architecture: The shell reads user input, parses arguments, forks a child 
+  process, and uses execvp (or similar) to run system binaries. Built-in 
+  commands are executed directly in the parent process.
+  
+- Configuration Subsystem: We are currently developing a custom parser for 
+  ".kss" (Knight Shell Script) configuration files. This will allow lightweight 
+  environment styling and custom alias bindings.
+
+-------------------------------------------------------------------------------
+4. HOW TO CONTRIBUTE
+-------------------------------------------------------------------------------
+We welcome code optimizations, memory leak fixes, and new features!
+
+Workflow:
+1. Fork the repository on GitHub.
+2. Create a feature branch ($ git checkout -b feature/amazing-feature).
+3. Ensure your C code is well-formatted and follows standard memory 
+   management practices (always free() allocated buffers).
+4. Verify that 'make' compiles without warnings.
+5. Commit your changes ($ git commit -m 'Add some amazing feature').
+6. Push to the branch ($ git push origin feature/amazing-feature).
+7. Open a Pull Request detailing your changes.
+
+-------------------------------------------------------------------------------
+5. LICENSE
+-------------------------------------------------------------------------------
+This project is open-source and licensed under the MIT License. Feel free to 
+modify and distribute it according to the license terms.
+===============================================================================
