@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "../k_exec.h"
+#include "../../k_exec.h"
 
 void knight_trans(char *buffer)
 {
