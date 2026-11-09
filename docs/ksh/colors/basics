@@ -1,0 +1,11 @@
+Basics groups of colors created for easy use, we represent the colors with Hex Values:
+
+colors --> {
+	red => basics.red();
+	blue => basics.blue();
+	green => basics.green();
+	grey => basics.grey();
+	pink => basics.pink();
+	purple => basics.purple();
+	gold => basics.gold();
+}

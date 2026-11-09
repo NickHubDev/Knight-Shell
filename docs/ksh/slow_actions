@@ -1,0 +1,22 @@
+
+slow.data();
+-------------
+
+Only get a set of datas from the OS,
+this can be funny for make your prompt dinamic:
+
+Structure --> type, action
+
+Types
+======
+
+icon : An Icon created for represented the action
+and it result.
+
+text : A Text that represents the same as
+the icon in text.
+
+Actions
+========
+
+KERNEL : Detecs between Darwin / Windows / Linux.

@@ -1,0 +1,26 @@
+The Syntax and Group of Predeterminated Git Features for .ksh files:
+
+git.branch();
+--------------
+
+Shows the branch in were we are stading right now at
+our code, for efficiency and understanding. This funcion
+be refresh in every single command, like all the rest of
+this syntax code.
+
+git.repo();
+------------
+
+This one feature show us the repository in which
+we are working for, using this type of definition for
+not to be noisy "RepoCreator/RepositoryName", simple
+but efficient.
+
+git.commitsDous();
+-------------------
+
+One of the most important and useful features
+bring the ability of known how much commits
+we have done in the current branch.
+
+A lot of more GIT FEATURES will be created in the future, enjoy!

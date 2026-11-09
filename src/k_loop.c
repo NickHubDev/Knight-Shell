@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include "k_loop.h"
+#include "util/actions/exec.h"
 #include "util/items/raw_mode.h"
 #include "util/actions/translation.h"
+#include "builtins.h"
 
 void knight_prompt(void)
 {
-    printf("[] & dirrectory (nizolax) {git.branch}\n");
+    char *propmt = exec_sh("/home/nizolax/.config/ksh/config.sh");
+    printf("%s\n", propmt);
+    free(propmt);
     printf(" 󱞩 ");
     fflush(stdout);
 }
@@ -81,13 +86,19 @@ int knight_loop(void)
 
                 if (position > 0)
                 {
-                    knight_trans(buffer);
+                    if (!build_in(buffer))
+                    {
+                        knight_trans(buffer);
+                    }
+                    
                 }
 
                 position = 0;
                 knight_prompt();
                 continue;
             }
+
+
 
             if (c >= 32 && c <= 126 && position < 1023)
             {

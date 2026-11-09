@@ -1,0 +1,10 @@
+The syntax of the Alias Actions created for bring a fastest experience working to the user:
+
+alias.set();
+-------------
+
+Let us create an name for an alias, this
+function is conformated by two variables in the "()":
+
+- Name --> str NameOfAlias
+- Action --> shell action like "ls -l" 
