@@ -2,7 +2,7 @@
 KNIGHT SHELL - DEVELOPERS DOCUMENTATION
 ===============================================================================
 
-Version: 0.6.0
+Version: 0.8.0
 Language: C (Standard C99/C11)
 Repository: https://github.com/NickHubDev/Knight-Shell.git
 
@@ -13,13 +13,17 @@ development.
 -------------------------------------------------------------------------------
 1. PROJECT STRUCTURE
 -------------------------------------------------------------------------------
+
 The codebase is organized as follows:
 
-- main.c       : Starter point, in this file we only call the knight_loop()
+- main.c       : Starter point, in this file we only call the Kloop()
                  function.
 
 - src/         : Source files containing core logic, built-in commands, 
                  and utility functions.
+
+- headers/     : Headers of all files are created here for been included
+                 on the library.h file which recolects all the header files.
 
 - shell/       : Additional environment/shell subsystem components.
 
@@ -27,56 +31,85 @@ The codebase is organized as follows:
 
 - install.sh   : Installer script for standard users.
 
-- .gitignore   : Build artifacts and temporary file filters.
-
 -------------------------------------------------------------------------------
 2. COMPILATION AND BUILDING
 -------------------------------------------------------------------------------
+
 As a developer, you might prefer to bypass the 'install.sh' script and manage 
 the build process manually using the provided Makefile.
 
 Requirements:
-- A C compiler (gcc)
+
+- A C compiler (gcc by default used in the project)
+
 - GNU Make
 
 To build the executable:
+
 $ make
 
 This will compile the source files and generate the 'knight' binary in the 
-root directory.
+actual directory.
+
+To implant the program in your binnaries instead:
+
+$ make production
+
+This will create the binnary file named as "knight" and throw
+it into your /usr/bin/ folder, so now you can use "knight" command 
+in your shell to run the shell.
 
 To clean build artifacts (object files and binaries):
+
 $ make clean
 
 -------------------------------------------------------------------------------
 3. UNDER THE HOOD & FUTURE IMPLEMENTATIONS
 -------------------------------------------------------------------------------
-- Architecture: The shell reads user input, parses arguments, forks a child 
+
+- Architecture: 
+
+  The shell reads user input, parses arguments, forks a child 
   process, and uses execvp (or similar) to run system binaries. Built-in 
   commands are executed directly in the parent process.
   
-- Configuration Subsystem: We are currently developing a custom parser for 
-  ".kss" (Knight Shell Script) configuration files. This will allow lightweight 
-  environment styling and custom alias bindings.
+- Configuration Subsystem: 
+
+  We are currently developing a custom parser for 
+  ".ksh" (Knight Shell Script) configuration files. This will allow lightweight 
+  environment styling and custom alias bindings. 
+
+  By the time of this files are beeing development you can use ".sh" import to
+  a "config.sh" that might be created at the "$HOME/.config/ksh/" path.
 
 -------------------------------------------------------------------------------
 4. HOW TO CONTRIBUTE
 -------------------------------------------------------------------------------
+
 We welcome code optimizations, memory leak fixes, and new features!
 
 Workflow:
+
 1. Fork the repository on GitHub.
+
 2. Create a feature branch ($ git checkout -b feature/amazing-feature).
+
 3. Ensure your C code is well-formatted and follows standard memory 
    management practices (always free() allocated buffers).
+
 4. Verify that 'make' compiles without warnings.
+
 5. Commit your changes ($ git commit -m 'Add some amazing feature').
+
 6. Push to the branch ($ git push origin feature/amazing-feature).
+
 7. Open a Pull Request detailing your changes.
 
 -------------------------------------------------------------------------------
 5. LICENSE
 -------------------------------------------------------------------------------
+
 This project is open-source and licensed under the MIT License. Feel free to 
 modify and distribute it according to the license terms.
+
 ===============================================================================

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "exec.h"
+#include "../../../headers/mf/exec.h"
 
 char *exec_sh(const char* cmd)
 {

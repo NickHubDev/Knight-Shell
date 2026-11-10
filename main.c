@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include "src/k_loop.h"
+#include "headers/library.h"
 
 int main()
 {
-    knight_loop();
+    Kloop();
     return 0;
 }

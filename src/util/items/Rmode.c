@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <termios.h>
+#include "../../../headers/library.h"
 
 struct termios original;
 

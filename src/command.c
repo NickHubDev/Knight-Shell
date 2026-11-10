@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include "util/items/raw_mode.h"
+#include "../headers/library.h"
 
-int knight_exec(char **args)
+int Kcommand(char **args)
 {
 	disableRawm();
 	pid_t pid = fork();

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
-#include "../../k_exec.h"
+#include "../../../headers/library.h"
 
-void knight_trans(char *buffer)
+void Ktranslate(char *buffer)
 {
     int i = 0;
     char *args[10];
@@ -15,5 +15,5 @@ void knight_trans(char *buffer)
         token = strtok(NULL, " ");
     }
     args[i] = NULL;
-    knight_exec(args);
+    Kcommand(args);
 }

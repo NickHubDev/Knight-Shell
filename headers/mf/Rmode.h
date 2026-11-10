@@ -1,5 +1,5 @@
-#ifndef RAWH
-#define RAWH
+#ifndef __RAW__
+#define __RAW__
 
 void enableRawm(void);
 

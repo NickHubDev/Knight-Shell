@@ -1,5 +1,5 @@
-#ifndef EXEC_CMD
-#define EXEC_CMD
+#ifndef EXEC_SH
+#define EXEC_SH
 
 char *exec_sh(const char* cmd);
 
