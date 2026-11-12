@@ -1,8 +1,8 @@
 ===============================================================================
-KNIGHT SHELL - DEVELOPERS DOCUMENTATION
+KNIGHT SHELL - DEVELOPERS README
 ===============================================================================
 
-Version: 0.8.0
+Version: 0.9.0
 Language: C (Standard C99/C11)
 Repository: https://github.com/NickHubDev/Knight-Shell.git
 
@@ -57,7 +57,7 @@ $ make production
 
 This will create the binnary file named as "knight" and throw
 it into your /usr/bin/ folder, so now you can use "knight" command 
-in your shell to run the shell.
+in your shell to run the project.
 
 To clean build artifacts (object files and binaries):
 
@@ -105,11 +105,20 @@ Workflow:
 
 7. Open a Pull Request detailing your changes.
 
+MORE DETAILED INFO IS GIVEN ON THE CONTRIBUTING FILE.
+
 -------------------------------------------------------------------------------
 5. LICENSE
 -------------------------------------------------------------------------------
 
 This project is open-source and licensed under the MIT License. Feel free to 
 modify and distribute it according to the license terms.
+
+-------------------------------------------------------------------------------
+6. THANKS
+-------------------------------------------------------------------------------
+
+Thanks to people that help with the ideas, some code and to
+fixed errors, like Nowk and Fils.
 
 ===============================================================================

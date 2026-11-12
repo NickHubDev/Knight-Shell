@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
-#include <stdlib.h>
 #include "../headers/library.h"
 
 int build_in(char *cmd)

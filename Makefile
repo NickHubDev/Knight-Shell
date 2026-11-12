@@ -1,12 +1,11 @@
-CC = gcc -g
-FILE = main.c
-OUTPUT = k-shell
+CC = gcc
+MAIN = main.c
+OUTPUT = dev_version
 NAME = knight
-SRCS = main.c $(wildcard src/*.c) $(wildcard src/**/**/*.c)
-KSHS = dev/proof/kshFiles/source-code/charger.c $(wildcard dev/proof/kshFiles/source-code/**/*.c)
+SRCS = main.c $(wildcard src/*.c) $(wildcard src/**/*.c) $(wildcard src/**/**/*.c)
 
 build:
-	$(CC) main.c $(shell find src -name "*.c") -o $(OUTPUT)
+	$(CC) $(SRCS) -o $(OUTPUT)
 	clear
 	./$(OUTPUT)
 
@@ -15,9 +14,5 @@ production:
 	sudo rm /usr/bin/knight
 	sudo mv $(NAME) /usr/bin/
 
-ksh:
-	$(CC) $(KSHS) -o kshFiles
-	./kshFiles
-
 clear:
-	rm -rf ./k-shell
+	rm -rf ./$(OUTPUT)

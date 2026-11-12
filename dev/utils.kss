@@ -1,9 +1,0 @@
-prompt 
-{
-    "[slow.data(KN)] - dir.dir(); {git.branch()}";
-}
-
-aliases
-{
-    ll : exec.knight(ls -l);
-}

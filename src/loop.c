@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <string.h>
 #include "../headers/library.h"
 
 int Kloop(void)
@@ -55,30 +52,39 @@ int Kloop(void)
 
             if (c == 0x1B)
             {
-                cont++;
                 char res[2];
                 if (read(STDIN_FILENO, &res[0], 1) > 0 && read(STDIN_FILENO, &res[1], 1) > 0)
                 {
                     if (res[0] == 0x5B)
                     {
-                        cont++;
                         if (res[1] == 0x44)
                         {
-                            cont++;
-                            printf("\b");
-                            int n_cont = cont;
-                            cont = cont - n_cont;
-                            fflush(stdout);
-                            continue;
+                            if (cont <= 0 )
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                cont--;
+                                printf("\b");
+                                fflush(stdout);
+                                continue;
+                            }
                         }
                         else if (res[1] == 0x43)
                         {
-                            cont++;
-                            printf("\x1b[C");
-                            int n_cont = cont;
-                            cont = cont - n_cont;
-                            fflush(stdout);
-                            continue;
+                            if (cont < 0)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                cont++;
+                                printf("\x1b[C");
+                                fflush(stdout);
+                                continue;
+                            }
+                            
                         }
                     }
                 }

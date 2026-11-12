@@ -1,6 +1,13 @@
 #ifndef __LIBRARYK__
 #define __LIBRARYK__
 
+// Import the standar libraries of Project
+
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+
 // Import the Multi Functions
 
 #include "mf/exec.h"
