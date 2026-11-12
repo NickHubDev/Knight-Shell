@@ -1,17 +1,18 @@
 CC = gcc
-FILE = main.c
-OUTPUT = k-shell
+MAIN = main.c
+OUTPUT = dev_version
 NAME = knight
-SRCS = main.c $(wildcard src/*.c) $(wildcard src/**/**/*.c)
+SRCS = main.c $(wildcard src/*.c) $(wildcard src/**/*.c) $(wildcard src/**/**/*.c)
 
 build:
-	$(CC) $(SRCS) -o $(OUTPUT) -lreadline
+	$(CC) $(SRCS) -o $(OUTPUT)
+	clear
 	./$(OUTPUT)
 
 production:
-	$(CC) $(SRCS) -o $(NAME) -lreadline
+	$(CC) $(SRCS) -o $(NAME) 
 	sudo rm /usr/bin/knight
 	sudo mv $(NAME) /usr/bin/
 
 clear:
-	rm -rf ./k-shell
+	rm -rf ./$(OUTPUT)

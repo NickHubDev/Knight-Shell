@@ -1,7 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "exec.h"
+#include "../../../headers/library.h"
 
 char *exec_sh(const char* cmd)
 {

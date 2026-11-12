@@ -1,28 +1,13 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "k_loop.h"
-#include "util/actions/exec.h"
-#include "util/items/raw_mode.h"
-#include "util/actions/translation.h"
-#include "builtins.h"
+#include "../headers/library.h"
 
-void knight_prompt(void)
-{
-    char *propmt = exec_sh("/home/nizolax/.config/ksh/config.sh");
-    printf("%s\n", propmt);
-    free(propmt);
-    printf(" 󱞩 ");
-    fflush(stdout);
-}
-
-int knight_loop(void)
+int Kloop(void)
 {
     enableRawm();
-    knight_prompt();
+    Kprompt();
     
     char buffer[1024];
     int position = 0;
+    int cont = 0;
 
     while(1)
     {
@@ -38,7 +23,7 @@ int knight_loop(void)
             if (c == 0x0C) 
             {
                 printf("\x1b[2J\x1b[H");
-                knight_prompt();
+                Kprompt();
                 continue;
             }
 
@@ -51,9 +36,18 @@ int knight_loop(void)
             if (c == 0x08 || c == 0x7F)
             {
                 position--;
-                printf("\b \b");
-                fflush(stdout);
-                continue;
+                if (cont < 0)
+                {
+                    continue;
+                }
+                else if (cont > 0)
+                {
+                    cont--;
+                    printf("\b \b");
+                    fflush(stdout);
+                    continue;
+                }
+                
             }
 
             if (c == 0x1B)
@@ -65,15 +59,32 @@ int knight_loop(void)
                     {
                         if (res[1] == 0x44)
                         {
-                            printf("\b");
-                            fflush(stdout);
-                            continue;
+                            if (cont <= 0 )
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                cont--;
+                                printf("\b");
+                                fflush(stdout);
+                                continue;
+                            }
                         }
                         else if (res[1] == 0x43)
                         {
-                            printf("\x1b[C");
-                            fflush(stdout);
-                            continue;
+                            if (cont < 0)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                cont++;
+                                printf("\x1b[C");
+                                fflush(stdout);
+                                continue;
+                            }
+                            
                         }
                     }
                 }
@@ -88,13 +99,15 @@ int knight_loop(void)
                 {
                     if (!build_in(buffer))
                     {
-                        knight_trans(buffer);
+                        Ktranslate(buffer);
                     }
                     
                 }
 
                 position = 0;
-                knight_prompt();
+                int n_cont = cont;
+                cont = cont - n_cont;
+                Kprompt();
                 continue;
             }
 
@@ -103,6 +116,7 @@ int knight_loop(void)
             if (c >= 32 && c <= 126 && position < 1023)
             {
                 buffer[position++] = c;
+                cont++;
                 printf("%c", c);
                 fflush(stdout);
             }
