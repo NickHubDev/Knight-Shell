@@ -13,6 +13,7 @@ production:
 	$(CC) $(SRCS) -o $(NAME) 
 	sudo rm /usr/bin/knight
 	sudo mv $(NAME) /usr/bin/
+	clear
 
 clear:
 	rm -rf ./$(OUTPUT)
