@@ -54,7 +54,7 @@ are supposed to be known by the contributor.
 
 **CONTRIBUTION DOCUMENTATION**
 
-[Read the Knight Shell Documentation](https://github.com/NickHubDev/Knight-Shell.git/tree/dev/docs)
+[Read the Knight Shell Documentation](https://github.com/NickHubDev/Knight-Shell/tree/dev/docs)
 
 Thank you once again for considering contributing to Knight Shell.
 

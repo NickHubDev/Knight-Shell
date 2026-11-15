@@ -8,9 +8,9 @@ language.
 The two predominant language that you can
 use for learn this project are:
 
-- [**Spanish**](#spanish/)
+- [**Spanish**](./spanish/index.md)
 
-- [**English**](#english/)
+- [**English**](./english/index.md)
 
 Use that language that ***made
 you feel comfortable.***
