@@ -22,7 +22,7 @@ A medida que Knight Shell evolucione, se incorporarán nuevas secciones para doc
 
 Knight Shell es un proyecto open source en constante evolución, por lo que las contribuciones de la comunidad siempre son bienvenidas.
 
-Si estás interesado en ayudar con el desarrollo del proyecto, mejorar funcionalidades existentes o implementar nuevas características, puedes consultar nuestra **Documentación para Desarrolladores**.
+Si estás interesado en ayudar con el desarrollo del proyecto, mejorar funcionalidades existentes o implementar nuevas características, puedes consultar nuestra [**Documentación para Desarrolladores**](./Contribution/).
 
 En ella encontrarás una introducción a las bases del desarrollo del proyecto, las directrices para contribuir y las posibles funcionalidades futuras.
 
