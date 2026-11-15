@@ -6,7 +6,7 @@
 
 The goal of Knight Shell is to provide a lightweight and efficient shell environment without sacrificing the ability to personalize the way users interact with their terminal.
 
-With the release of [**version 0.9.0**](#), Knight Shell introduces a new customization system that allows users to create their own prompts and personalize their appearance, providing a more comfortable, recognizable, and visually appealing command-line experience.
+With the release of [**version 0.9.0**](../../release/v0.9.0), Knight Shell introduces a new customization system that allows users to create their own prompts and personalize their appearance, providing a more comfortable, recognizable, and visually appealing command-line experience.
 
 ## Navigating the Documentation
 
@@ -14,7 +14,7 @@ To get the most out of Knight Shell, we recommend becoming familiar with its off
 
 Currently, the documentation is organized around one main section:
 
-- **Getting Started** — Learn how to create and configure your first custom prompt, following practical recommendations and productivity guidelines described in [**Shell Productivity**](#).
+- **Getting Started** — Learn how to create and configure your first custom prompt, following practical recommendations and productivity guidelines described in [**Shell Productivity**](./Utilities/shell-productivity.md).
   
 
 As Knight Shell evolves, additional documentation sections will be introduced to cover new features and improvements.

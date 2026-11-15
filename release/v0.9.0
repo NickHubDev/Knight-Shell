@@ -1,0 +1,33 @@
+===============================
+v0.9.0 - First Usable Version
+===============================
+
+Presented by: Nicolas Gracia (nizolax)
+Purpose: Present v0.9.0
+Pre-release: v0.8.0
+Released: v0.9.0
+
+-------------------------------------------------------------------------------
+
+In the v0.9.0 named as the FIRST USABLE Version
+there are a lot of new features and errors that make the
+shell usable by users day by day withouth errors.
+
+------------
+FEATURES
+------------
+
+The features presented in v0.9.0 tried to make Knight Shell
+better than before and made the user feel comfortable:
+
+1. Memory Pointers Errors Fixed.
+2. Presented the Support of Bash Scripting config File for Prompt Personalization.
+3. Directory Movement Permited in this Version.
+
+----------------
+SPECTATIONS
+----------------
+
+For the next version we are working for create
+the posibilitie of have env variables, commands history
+of minimun the last 2 commands writes from the user.

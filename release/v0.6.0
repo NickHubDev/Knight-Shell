@@ -1,0 +1,34 @@
+===============================
+v0.6.0 - First Stable Version
+===============================
+
+Presented by: Nicolas Gracia (nizolax)
+Purpose: Present v0.6.0
+Pre-release: v0.5.0
+Released: v0.6.0
+
+-------------------------------------------------------------------------------
+
+In the v0.6.0 was presented the first
+stable version of Knight Shell, almost the
+errors of v0.3.0 were fixed.
+
+---------
+ERRORS
+---------
+
+The errors presented in v0.6.0 were:
+
+1. Memory declaration in pointers.
+2. Directory commands does not works.
+3. Prompts are not personalizable.
+
+------------
+FEATURES
+------------
+
+The new features presented in v0.6.0, from v0.3.0 are:
+
+1. Raw and Cooked mode created.
+2. New DIR structure.
+3. Functions recursives.
