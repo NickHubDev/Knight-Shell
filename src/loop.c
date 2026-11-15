@@ -8,6 +8,7 @@ int Kloop(void)
     char buffer[1024];
     int position = 0;
     int cont = 0;
+    char dolar[1024];
 
     while(1)
     {
@@ -110,8 +111,6 @@ int Kloop(void)
                 Kprompt();
                 continue;
             }
-
-
 
             if (c >= 32 && c <= 126 && position < 1023)
             {

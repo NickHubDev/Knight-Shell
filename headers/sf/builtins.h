@@ -2,5 +2,6 @@
 #define __BUILDIN__
 
 int build_in(char *cmd);
+int dolar_sign(void);
 
 #endif
